@@ -1,5 +1,13 @@
 # Weather-App
 
+Create a config.js file right next to index.html and add your API key there:
+//-- config.js --//
+
+const config = {
+apiKey: "your_api_key",
+};
+
+<--------------------------------->
 Activity 1: Setting Up the Project
 • Task 1: Initialize a new project directory and set up the basic HTML structure for the weather app.
 

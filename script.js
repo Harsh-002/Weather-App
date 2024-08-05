@@ -49,10 +49,9 @@ function handleClick() {
 }
 
 async function getForecastData() {
-  const apiKey = "7dbc00cf6016fffead34186c03ac71e7";
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+      `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${config.apiKey}`
     );
     const data = await response.json();
     console.log(data);
@@ -96,8 +95,7 @@ function parseForecastData(data) {
 }
 
 async function getWeather() {
-  const apiKey = "7dbc00cf6016fffead34186c03ac71e7";
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${config.apiKey}&units=metric`;
 
   try {
     const response = await fetch(url);
