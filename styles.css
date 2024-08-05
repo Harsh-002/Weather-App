@@ -154,7 +154,7 @@ body {
   width: 100%;
 }
 .forecast-card {
-  background-color: transparent;
+  background-color: #e8e8e86a;
   width: 30%;
   border: 1px solid #ddd;
   border-radius: 5px;
