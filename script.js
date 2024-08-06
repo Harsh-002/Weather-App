@@ -54,7 +54,6 @@ async function getForecastData() {
       `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${config.apiKey}`
     );
     const data = await response.json();
-    console.log(data);
     displayForecastData(data);
   } catch (error) {
     console.error("Error fetching weather data:", error);
@@ -125,8 +124,6 @@ function displayWeatherData(data) {
   wind.textContent = `${data.wind.speed} mph / ${data.wind.deg} deg`;
   pressure.textContent = `${data.main.pressure}`;
   seaLevel.textContent = `${data.main.sea_level}`;
-
-  console.log(main_weather.textContent);
 
   switch (main_weather.textContent) {
     case "Rainy":
